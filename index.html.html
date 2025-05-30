@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para Ti 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .carta {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+      animation: aparecer 2s ease;
+    }
+
+    .carta img {
+      width: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid #ee9ca7;
+    }
+
+    .carta h1 {
+      font-size: 28px;
+      color: #c94b7d;
+    }
+
+    .carta p {
+      font-size: 18px;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    .btn-musica {
+      margin-top: 30px;
+      background-color: #c94b7d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-musica:hover {
+      background-color: #a33f69;
+    }
+
+    @keyframes aparecer {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="carta">
+  <img src="yine.jpg" alt="Foto de ella">
+  <h1>Para ti, mi amor ❤️</h1>
+  <p>
+    Desde que llegaste a mi vida, cada día es más bonito.  
+    Tu sonrisa ilumina mis días y tu forma de ser me enamora más cada segundo.  
+    Esta carta es solo un pequeño detalle para recordarte cuánto te amo. 💕  
+    Gracias por existir. 🌸
+  </p>
+  <button class="btn-musica" onclick="reproducirMusica()">💖 Reproducir nuestra canción</button>
+</div>
+
+<audio id="musica" src="10 Razones Para Amarte, El Gran Martín Elías & Juancho De La Espriella - Video Oficial.mp3"></audio>
+
+<script>
+  function reproducirMusica() {
+    const musica = document.getElementById("musica");
+    musica.play();
+  }
+</script>
+
+</body>
+</html>
